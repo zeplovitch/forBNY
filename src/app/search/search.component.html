@@ -3,7 +3,7 @@
     <div class="form-group">
       <div class="input-group">
         <label for="regionId" control-label>Regions</label>
-        <select (change)="onSelected($event.target.value)" class="form-control" id="regionId">
+        <select (change)="onSelectedRegion($event.target.value)" class="form-control" id="regionId">
           <option  *ngFor="let region of regions$ | async">{{
             region
           }}</option>

@@ -7,12 +7,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
   private url = 'assets/data.json';
-  //regions$ = this.http.get<Region[]>(this.url);
 
+  getData$ = this.http.get<any>(this.url);
 
-  getData(): Observable<any> {
-    return this.http.get(this.url);
-  }
   constructor(private http: HttpClient) {
   }
 }

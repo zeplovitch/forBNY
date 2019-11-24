@@ -8,8 +8,8 @@
   ["DEF",
       [
         {"id":"U1","name":"John","roles":["ADMIN"]},
-        {"id":"U2","name":"Rob","roles":["BANKER","L2APP","ADMIN"]},
-      {"id":"U3","name":"Jane","roles":["BANKER","ADMIN"]}
+        {"id":"U2","name":"Rob","roles":["BANKER","L2APP","L3APP"]},
+        {"id":"U3","name":"Jane","roles":["BANKER","L3APP"]}
       ]
   ]
 ]
