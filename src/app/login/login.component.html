@@ -1,0 +1,42 @@
+<div *ngIf="navigateOption === '1'" class="row">
+    <div class="col-md-2 col-sm-6">
+      <div class="form-group">
+        <div class="input-group">
+          <label for="regionId" control-label>User Name</label>
+          <input type="text" class="form-control" id="userName">
+        </div>
+        <div class="input-group">
+            <label for="regionId" control-label>Password</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <div class="input-group distance-buttons">
+              <input class="btn btn-primary"  id="button-submit" type="submit" value="Submit">
+              <input class="btn btn-primary" (click) = "toggle()" type="reset" value="Sign Up">
+            </div>
+      </div>
+    </div></div>
+    <div *ngIf="navigateOption === '2'" class="row">
+        <div class="col-md-2 col-sm-6">
+          <div class="form-group">
+            <div class="input-group">
+              <label for="regionId" control-label>{{navigateOption}}User Name</label>
+              <input type="text" class="form-control" id="userName">
+            </div>
+            <div class="input-group">
+                <label for="regionId" control-label>Password</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+              <div class="input-group">
+                <label for="regionId" control-label>Validate Password</label>
+                <input type="password" class="form-control" id="password">
+              </div>
+              <div class="input-group">
+                  <label for="regionId" control-label>Phone</label>
+                  <input type="password" class="form-control" id="password">
+                </div>
+              <div class="input-group distance-buttons">
+                  <input class="btn btn-primary"  id="button-submit" type="submit" value="Submit">
+                  <input class="btn btn-primary" type="reset" (click)= "toggle()" value="Sign In">
+                </div>
+          </div>
+        </div></div>

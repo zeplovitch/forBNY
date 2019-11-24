@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-2 col-sm-6">
+    <div class="form-group">
+      <div class="input-group">
+        <label for="regionId" control-label>Regions</label>
+        <select (change)="onSelected($event.target.value)" class="form-control" id="regionId">
+          <option  *ngFor="let region of regions$ | async">{{
+            region
+          }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2 col-sm-6">
+    <div class="input-group">
+      <label for="regionId">Bankers</label>
+      <select class="form-control" id="regionId">
+        <option *ngFor="let banker of bankers$ | async">{{ banker.name }}</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2 col-sm-6">
+    <div class="form-group">
+        <div class="input-group">
+        <label for="regionId">L2APP</label>
+        <select class="form-control" id="regionId">
+          <option *ngFor="let banker of role2">{{ banker.name }}</option>
+        </select>
+    </div></div></div>
+    <div class="col-md-2 col-sm-6">
+      <div class="form-group">
+          <div class="input-group">
+        <label for="regionId">L3APP</label>
+        <select class="form-control" id="regionId">
+          <option *ngFor="let banker of role3">{{ banker.name }}</option>
+        </select>
+      </div></div>
+    </div>
+  </div>
