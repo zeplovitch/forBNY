@@ -3,12 +3,7 @@
 In order to run:
 npm install 
 ng serve. 
-you will see 4 errors those are typescript type errors.
-(was not able to get rid of those something with the use of Map object type 
-and the rxjs Array.from).
-If u will just move to the search.component.ts and just save it. it will refresh 
-and will allow you to test.
-here is what was implemented:
+
 
 1. read from mockup json file.
 2. fill the region dropdown
