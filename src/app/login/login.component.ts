@@ -17,11 +17,12 @@ import { ActivatedRoute } from '@angular/router';
     trigger('openClose',[
     state('open', style({
       opacity: 1,
-      transform: 'translateY(-20%)'
+      transform: 'rotateY(0deg) rotateZ(360deg)'
     })),
 
     state('closed', style({
       opacity: 0,
+    //  transform: 'rotate(360eg)'
     })),
 
     transition('open => closed', [
