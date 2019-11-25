@@ -65,12 +65,12 @@ role3: User[];
   fillApprovars(region: string) {
      forkJoin([
       this.referenceData$.pipe(
-         map(data => Array.from(data.get(region).values())),
-         map(data => data.filter(d => d.roles.find(role => role === 'L2APP'))),
+         map(data => Array.from(data.get(region)['values']())),
+         map(data => data.filter(d => d['roles'].find(role => role === 'L2APP'))),
       ),
       this.referenceData$.pipe(
-        map(data => Array.from(data.get(region).values())),
-        map(data => data.filter(d => d.roles.find(role => role === 'L3APP'))),
+        map(data => Array.from(data.get(region)['values']())),
+        map(data => data.filter(d => d['roles'].find(role => role === 'L3APP'))),
      ),
     ]
   ).subscribe(
