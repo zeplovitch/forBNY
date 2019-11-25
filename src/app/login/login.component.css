@@ -5,3 +5,7 @@
 #button-submit {
   margin-right:3px;
 }
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}

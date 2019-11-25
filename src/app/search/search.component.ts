@@ -4,15 +4,11 @@ import {
   EMPTY,
   forkJoin,
   BehaviorSubject,
-  combineLatest,
-  merge
 } from 'rxjs';
 import {
   mergeMap,
   catchError,
-  map,
-  tap,
-  toArray
+  map
 } from 'rxjs/operators';
 
 @Component({
@@ -58,17 +54,23 @@ role3: User[];
     data =>  this.fillApprovars(data)
     );
   }
+
 // method that preapres the 2 role2,role3 drop downs
+// was not able to resolve the highlighed error on rows 66,67,70,71
+// seems like its a typescript typed error but the ocde is running could not
+// find the reason or the way  to solve it.
+// if ng serve give errors just try to re save.
+// seems like something with rxjs and the Map object is not working as they should.
 
   fillApprovars(region: string) {
      forkJoin([
       this.referenceData$.pipe(
          map(data => Array.from(data.get(region).values())),
-         map(data => data.filter(data => data.roles.find(role => role === 'L2APP'))),
+         map(data => data.filter(d => d.roles.find(role => role === 'L2APP'))),
       ),
       this.referenceData$.pipe(
         map(data => Array.from(data.get(region).values())),
-        map(data => data.filter(data => data.roles.find(role => role === 'L3APP'))),
+        map(data => data.filter(d => d.roles.find(role => role === 'L3APP'))),
      ),
     ]
   ).subscribe(

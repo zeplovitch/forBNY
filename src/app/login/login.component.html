@@ -1,5 +1,5 @@
-<div *ngIf="navigateOption === '1'" class="row">
-    <div class="col-md-2 col-sm-6">
+<div [@openClose]="isOpen ? 'open' : 'closed'" [hidden]="!this.isOpen" class="row">
+    <div class="col-md-2 col-sm-6 col-centered">
       <div class="form-group">
         <div class="input-group">
           <label for="regionId" control-label>User Name</label>
@@ -15,11 +15,11 @@
             </div>
       </div>
     </div></div>
-    <div *ngIf="navigateOption === '2'" class="row">
-        <div class="col-md-2 col-sm-6">
+<div [@openClose]="!isOpen ? 'open' : 'closed'" [hidden]="this.isOpen" class="row">
+        <div class="col-md-2 col-sm-6 col-centered">
           <div class="form-group">
             <div class="input-group">
-              <label for="regionId" control-label>{{navigateOption}}User Name</label>
+              <label for="regionId" control-label>User Name</label>
               <input type="text" class="form-control" id="userName">
             </div>
             <div class="input-group">
@@ -39,4 +39,4 @@
                   <input class="btn btn-primary" type="reset" (click)= "toggle()" value="Sign In">
                 </div>
           </div>
-        </div></div>
+</div></div>
