@@ -22,7 +22,6 @@ import { ActivatedRoute } from '@angular/router';
 
     state('closed', style({
       opacity: 0,
-    //  transform: 'rotate(360eg)'
     })),
 
     transition('open => closed', [
