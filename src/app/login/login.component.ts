@@ -14,7 +14,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
   animations: [
-    trigger('openClose',[
+    trigger('openClose', [
     state('open', style({
       opacity: 1,
       transform: 'rotateY(0deg) rotateZ(360deg)'
